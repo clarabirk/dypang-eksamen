@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content=" initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Dypångs nye hjemmeside">
+    <meta name="author" content="Benjamnin, Jeppe, Sofie og Clara">
+    <title>DYPÅNG MANAGEMENT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+  </head>
+
+<body>
+
+  <main id="appRoot">
+    <header class="navbar">
+    <nav class="tabbar">
+      <!-- Logo -->
+    
+     <a href="#/" ><img src="img/logo.png" alt="Logo" width="250" class="logo"></a>
+
+      <!-- The mobile menu icon -->
+      <label for="mobileicon" class="mobileiconlabel">&#9776;</label>
+      <input type="checkbox" id="mobileicon" class="mobileicon">
+      
+      <!-- Menu items -->
+      <div class="menuitems__container">
+       
+
+      <a href="#/" class="menuitem">FORSIDE</a>
+       <a href="#/arrangementer" class="menuitem">ARRANGEMENTER</a>
+       <a href="#/tilbyder" class="menuitem">VI TILBYDER</a>
+       <a href="#/kontakt" onclick="myFunction()" class="menuitem">OM OS</a>
+        <a href="#/booking" class="menuitem">BOOKING</a>
+   
+        
+      </div>
+    </nav>
+  </header>
+
+
+    <!-- Forside -->
+    <section id="home" class="page">
+
+    <!-- Slider til forside - Clara -->  
+      <div class="SimpleSlider">
+        <img src="img/borddaek.jpg" class="billede2">
+        <img src="img/bryllup.jpg" class="billede2">
+        <img src="img/drinks.jpeg" class="billede2">
+        <img src="img/lokale.jpg" class="billede2">
+        <img src="img/lokale1.jpg" class="billede2">
+        <img src="img/lokaler2.jpg" class="billede2">
+        </div>
+        
+        <p class="tekstboks1">Dypång Management er et eventbureau, som altid står til rådighed for dig. Vi er et team af dygtige planlæggere, tjenere og bartendere, som altid står klar til at hjælpe dig til dit næste arrangement. 
+          Vores ekspertise ligger i eventkommunikationen, som vi mener, er den afgørende faktor for at budskabet i oplevelsen lagres i jeres stakeholders hukommelse. </p>
+
+     <!-- Slider til forside - Jeppe og Clara -->       
+          <div class="grid-container">
+            <div class="box1"><img src="img/ikoner/globus.png" width="25%"><p>Vi er meget klimaorienteret hos Dypång. Vi arbejder således indenfor en række projekter, der både skal kompensere for vores arrangementers klimaaftryk, men også bidrage til fremtidens klima.</p></div>
+            <div class="box2"><img src="img/ikoner/ore.png" width="30%"><p>Hos Dypång lytter vi til dig. Vi sørger for at få alle dine ønsker opfyldt, samt komme med gode råd og tips fra vores professionelle personale. Dette gør at du altid er sikret dit drømme arrangement.</p></div>
+            <div class="box3"><img src="img/ikoner/ramme.png" width="30%"><p>Hos Dypång er intet bestemt for jer, I skal ikke tænke på nogle pakkeløsninger eller lignende. Det er helt op til jer selv, hvordan jeres arrangement skal se ud. Derfor køber I bare rammerne, men skaber selv indholdet.</p></div>
+            <div class="box5"><img src="img/ikoner/pare.png" width="30%"><p>Du får aldrig en standardpakke hos os. Vi henter inspiration fra gastronomien, musikken, filmen og arkitekturen. Vi udforsker de nyeste digitale teknologier. Vi sørger for at finde det perfekte arrangment til dig!</p></div>
+          </div>
+
+    <!-- Slider til forside - Benjamin og Clara -->  
+          <div class="slider">
+            <div class="slide-track">
+          
+              <div class="slide">
+                <img src="img/logo/arla-logo.png" height="100" width="200"/>
+              </div>
+              <div class="slide">
+                <img src="img/logo/atea-logoer.png" height="100" width="140"/>
+              </div>
+              <div class="slide">
+                <img src="img/logo/AU.png" height="100" width="150"/>
+              </div>
+              <div class="slide">
+                <img src="img/logo/carletti-logoer.png" height="80" width="180"/>
+              </div>
+              <div class="slide">
+                <img src="img/logo/hummel.png" height="80" width="150"/>
+              </div>
+          
+              <div class="slide">
+                <img src="img/logo/weber-logoer.png" height="90" width="150"/>
+              </div>
+              <div class="slide">
+                <img src="img/logo/Kirkbi-hvidt-SODK.png" height="100" width="280"/>
+              </div>
+              <div class="slide">
+                <img src="img/logo/louis-poulsen.png" height="80" width="200"/>
+              </div>
+              <div class="slide">
+                <img src="img/logo/OlavdeLinde.png" height="80" width="150"/>
+              </div>
+              <div class="slide">
+                <img src="img/logo/sallinggroup-logoerhvid.png" height="100" width="250"/>
+              </div>
+              <div class="slide">
+                <img src="img/logo/top-logo-1.png" height="80" width="200"/>
+              </div>
+              <div class="slide">
+                <img src="img/logo/veromoda-logoer.png" height="100" width="250"/>
+              </div>
+                    
+            </div>
+          </div>
+          </section>
+
+
+          <!-- Arrangementer page -->
+    <section id="arrangementer" class="page">
+      
+      <!-- Knapper til filtrering - Jeppe --> 
+      <div class="arrangement__container1"> 
+        <h2 class="overskrift_arrangementer">Dypaang tilbyder mange forskellige arrangementer,<br> 
+          her er blot nogle eksempler på hvordan det kan se ud.</h2>
+        <button type="button" class="button" onclick="filter('bryllup')">Bryllup</button>
+        <button type="button" class="button" onclick="filter('fodselsdag')">Fødselsdag</button>
+        <button type="button" class="button" onclick="filter('ovrige')">Øvrige</button>
+        <button type="button" class="button" onclick="filter('alle')">Vis Alle</button>
+      </div>
+
+      <!-- Billeder til filtrering - Sofie, Benjamin, Clara og Jeppe --> 
+      <div class="grid-container1">
+        <img src="/img/bryllup.jpg" class="data bryllup">
+        <img src="/img/borddaek.jpg" class="data bryllup">
+        <img src="/img/bryllup1.jpg" class="data bryllup">
+        <img src="/img/bryllup2.jpg" class="data bryllup">
+        <img src="/img/bryllup3.jpg" class="data bryllup">
+        <img src="/img/bryllup4.jpg" class="data bryllup">
+        <img src="/img/bryllup5.jpg" class="data bryllup">
+        <img src="/img/bryllup6.jpg" class="data bryllup">
+        <img src="/img/bryllup7.jpg" class="data bryllup">
+        <img src="/img/borddaek.jpg" class="data fodselsdag">
+        <img src="/img/fodselsdag.jpg" class="data fodselsdag">
+        <img src="/img/fodselsdag1.jpg" class="data fodselsdag">
+        <img src="/img/fodselsdag2.jpg" class="data fodselsdag">
+        <img src="/img/fodselsdag9.jpg" class="data fodselsdag">
+        <img src="/img/fodselsdag10.jpg" class="data fodselsdag">
+        <img src="/img/ovrige.jpg" class="data ovrige">
+        <img src="/img/ovrige2.jpg" class="data ovrige">
+        <img src="/img/ovrige3.jpg" class="data ovrige">
+        <img src="/img/ovrige4.jpg" class="data ovrige">
+        <img src="/img/ovrige5.jpg" class="data ovrige">
+        <img src="/img/ovrige6.jpg" class="data ovrige">
+        <img src="/img/ovrige7.jpg" class="data ovrige">
+        <img src="/img/ovrige8.jpg" class="data ovrige">
+        <img src="/img/ovrige9.jpg" class="data ovrige">
+      </div>
+      
+     <a href="#/booking" class="arrangement_knap">Kontakt os</a>
+        
+    </section>
+    
+
+
+    <!-- Tilbyder -->
+    <section id="tilbyder" class="page">
+  
+      <div class="container3">
+
+       <!-- Gridbokse til billeder - Jeppe og Benjamin -->         
+        <div class="img1"><img src="img/lokale.jpg" class="billede1"></div>
+        
+        <div class="tekst1"><p>Hos Dypång har vi mange lokationer til rådighed. 
+          Det skal kunne opfylde dine krav, så derfor kan vi pynte det lige efter din smag. 
+          Det første vi har, er KANTINEN på Balticagade 12D. Det er et gammelt flydedok-værksted, som ligger lige ved havnen i Aarhus. 
+          Her vælter lyset ind og stemningen er helt unik.</p></div>
+        
+          <div class="tekst2"><p>Et andet lokale ved Dypång er NAT. Her er stemningen rå, rustik og omstillingsparat. 
+            Dette lokale kan bruges til alt og laves om til hvad end det skulle være. Projicere på alle vægge gør dette lokale til dit eget.</p></div>
+        <div class="img2"><img src="img/LOKALER1.jpg" class="billede3"></div>
+
+        <div class="img3"><img src="img/LOKALER3.jpg" class="billede4"></div>
+
+        <div class="tekst3"><p>Vi har også lokalet B21. Dette ligger så langt ned til havnen, som overhovedet muligt. 
+          Dette er en gammel skibsbyggerhal, som bare rummer af muligheder.  Her er der 450 kvm til rådighed. 
+          Udsigten over Aarhus er helt speciel og findes ikke flottere.</p></div>
+      </div>
+
+    <!-- Mapbox - Clara --> 
+      <div class="main_map">
+        <p class="tekst_map">Dette er blot nogle af vores venues i Aarhus. Vi arrangerer events i hele Danmark. Ved at samarbejde med nøje udvalgte ventes i hele Danmark, møder vi jer der, hvor I er. Vi har således afholdt nogle af de største, mindste, vildeste og vigtigste events på disse spændende lokaliteter. Du kan se nedenfor hvor vi ellers kan tilbyde lokaler.</p>
+        <div id='map'></div>
+      </div>
+
+    </section>
+
+
+<!--  Om os   -->
+
+      <section id="kontakt" class="page">
+
+        <div class="tekst_omos2">
+  <p class="tekst_omos">Dypång Management er et eventbureau, der skaber brandværdi igennem oplevelser. Vores ekspertise ligger i eventkommunikation, som vi mener, er den afgørende faktor for at budskabet i oplevelsen lagres i jeres hukommelse. Du får ikke det du forventer, du får mere. Du får aldrig en standard pakke ved os. Vi henter inspiration fra gastronomien og musikken og leger med de nyeste digitale teknologier. </p>
+      </div>
+  
+<!-- Counter til statistik - Benjamin, Jeppe, Sofie og Clara --> 
+
+      <section class="counters">
+        <div class="containerom">
+          <div>
+            <i class="fab fa-youtube fa-4x"></i>
+            <div class="counter" data-target="600">0</div>
+            <h3>Projekter</h3>
+          </div>
+          <div>
+            <i class="fab fa-twitter fa-4x"></i>
+            <div class="counter" data-target="7000">0</div>
+            <h3>Gæster</h3>
+          </div>
+          <div>
+            <i class="fab fa-facebook fa-4x"></i>
+            <div class="counter" data-target="200">0</div>
+            <h3>Medarbejder</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info om Dypång - Jeppe, Benjamin og Sofie --> 
+      <h1 class="klimaovers">Klimaansvarlige events</h1>
+
+      <div class="containerjeps">
+        <div class="jeps1">
+
+          <h2 class="ouberschriften">1. Klimaprojekt</h2>
+          <p class="">
+            Vi er en del af Climaiders to klimaprojekter.
+            
+            Det ene klimaprojekt går ud på at fjerne vores eget CO2 forbrug igennem en kompensation.
+            Hvordan gør vi det? Det gør vi ved hjælp af etablerede biogasanlæg i fattige dele af Kina. Disse biogasanlæg indfanger metangas fra svine afføring, som kobles via rør til gasblus i køkkener. Dette giver to elementære værdifaktorer: Metanen siver ikke ud i atmosfæren som en drivhusgas, og samtidig erstattes brugen af kul og træ. Igennem dette projekt klimakompenserer vi for vores eget CO2 forbrug udregnet for hvert arrangement. Det vil sige, at vi kompenserer for vores aftryk gennem CO2-kreditter.
+          </p>
+          <a href="https://da.climaider.com/project/sichuan" target="_blank" class="btn-klima">Læs mere her</a>
+        </div>
+
+        
+        <div class="jeps2">
+          
+          <h2>2. Klimaprojekt </h2>
+        <p>
+             Derudover støtter vi Climaiders andet klimaprojekt omhandlende genplantning af træer. Dette projekt sænker det generelle CO2-niveau i atmosfæren ved at plante træer, samtidig med at skabe socioøkonomiske fordele for den fattige lokalbefolkning i Madagaskar. Dette projekt giver os således en mulighed for at bidrage fremfor kun at kompensere.
+        </p>
+        <a href="https://da.climaider.com/trees/eden-reforestation-projects" target="_blank" class="btn-klima">Læs mere her</a>
+        </div>
+        <div class="jeps3">
+
+          <h2>3. Klimaprojekt </h2>
+    <p>
+        Foruden vores samarbejde med Climaider, gennemfører vi egne klimatiltag med udgangspunkt i recycling. Dette tiltag rummer et værdifuldt samarbejde med Grünbag, hvor overskydende banner doneres til Grünbag unikke taskeproduktion.
+    </p>
+    <a href="https://www.grunbag.dk/#gclid=Cj0KCQiAqbyNBhC2ARIsALDwAsDxhC5YeRxjkTbY4iyGRWsH5MCKbZWwPnfoVi6tUXe1Ty2D9D7AeTkaAg4TEALw_wcB" target="_blank" class="btn-klima">Læs mere her</a>
+        </div>
+      </div>
+
+    </section>
+
+    
+<!--  booking   -->
+    
+    <section id="booking" class="page">
+     
+    <!-- Booking side - Benjamin og Sofie --> 
+      <div class="container">
+        <div class="row">
+            <h1>Skriv til os</h1>
+        </div>
+        <div class="row">
+            <h4 style="text-align:center">Du er altid velkommen til at sende os en besked, hvis du har spørgsmål eller gerne vil vide mere om,<br> hvad vi kan tilbyde til netop dit arrangement. 
+            Beskriv dine ønsker til dit kommende arrangement, <br>bl.a. hvor mange gæster samt i hvilken anledning du skal afholde dit arrangement. 
+          </h4>
+        </div>
+
+     
+        <form action="https://formsubmit.co/clarabirk@hotmail.dk" method="POST">
+        <div class="row input-container">
+            <div class="col-xs-12">
+              <div class="styled-input wide">
+                <input type="text" name="name" required />
+                <label>Navn</label> 
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="styled-input">
+                <input type="email" name="email" required />
+                <label>Email</label> 
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="styled-input" style="float:right;">
+                <input type="text" name="tlf" required />
+                <label>Tlf. Nr</label> 
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <div class="styled-input wide">
+                <textarea name="besked" required></textarea>
+                <label>Besked</label>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <button type="submit" target="_blank" class="knappi">Send besked</button>
+            </div>
+        </div>
+      </div>
+    </form>
+      
+
+    </section>
+
+  </main>
+
+
+  <footer class="page_footer" >
+    <div class="footer_card">
+      <h4 class="footer_card_heading">SOCIALE MEDIER</h4>
+      <a href="https://www.facebook.com/dypaang" target="_blank"><img src="img/some/facebook.png" alt="facebook logo til sociale medier" class="some_image"></a>
+      
+      <a href="https://www.linkedin.com/company/dyp-ng-management-aps/mycompany/" target="_blank"><img src="img/some/linkedin.png" alt=" logo til sociale medier" class="some_image"></a>
+                  
+      <a href="https://www.instagram.com/dypaang/" target="_blank"><img src="img/some/instagram.png" alt="instagram logo til sociale medier" class="some_image"></a>
+      
+      </div>
+
+      
+      <div class="footer_card">
+      <h4 class="footer_card_heading1">KONTAKT</h4>
+      <address class="address">
+          Dypång Management <br>
+          +45 26 74 73 00 <br>
+          info@dypaang.dk <br>
+                      <br>
+      
+      </address>
+       </div>
+
+
+
+  </footer>
+
+  <script src="./js/app.js" type="module"></script>
+  <script src="./js/main.js"></script> 
+    </script>
+
+
+</body>
+
+</html>
